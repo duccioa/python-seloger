@@ -13,7 +13,7 @@ with open('README.rst', 'r') as r:
     readme = r.read()
 
 download_url = (
-    'https://github.com/duccioa/SeLoger/tarball/%s'
+    'https://github.com/duccioa/python-seloger/tarball/%s'
 )
 
 setup(
@@ -24,7 +24,7 @@ setup(
     long_description=readme,
     author='Duccio Aiazzi',
     author_email='duccio.aiazzi@gmail.com',
-    url='https://github.com/duccioa/SeLoger',
+    url='https://github.com/duccioa/python-seloger',
     download_url=download_url % version,
     install_requires=requires,
     license='MIT-Zero'

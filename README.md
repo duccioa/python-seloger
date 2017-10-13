@@ -1,33 +1,30 @@
-# python-seloger
+# SeLoger
 =================
 
-A simple `SeLoger <http://www.seloger.com>`__ wrapper, based on the `python-craigslist <https://github.com/juliomalegria/python-craigslist>` scraper.
+A simple [SeLoger](http://www.seloger.com) wrapper.
 
-License: `MIT-Zero <https://romanrm.net/mit-zero>`__.
+License: [MIT-Zero](https://romanrm.net/mit-zero).
 
 Disclaimer
 ----------
 
-* I don't work for or have any affiliation with Seloger.
-* This module was implemented for educational purposes. It should not be used for crawling or downloading data from Seloger.
+* I don't work for or have any affiliation with SeLoger.
+* This module was implemented for educational purposes. It should not be used for crawling or downloading data from SeLoger.
 
 Installation
 ------------
-With git installed:
-
+From the shell:
 ```shell
-pip install git+https://github.com/duccioa/python-seloger
-
+pip install git+https://github.com/duccioa/SeLoger
 ```
-Depending on your system, you might have to use:
+Depending on your system, you might want to try:
 ```shell
-sudo -H pip3 install git+https://github.com/duccioa/python-seloger
+pip3 install git+https://github.com/duccioa/SeLoger
 ```
-Otherwise, try:
-
+Or:
 ```shell
-pip install --upgrade https://github.com/duccioa/python-seloger/master
-```   
+pip3 install -e git+https://github.com/duccioa/SeLoger#egg=egg_name
+```
 
 Classes
 -------
@@ -76,10 +73,15 @@ Let's find a 1 bedroom apartment for buying in the 15th Arrondissement of Paris,
 
 ```python
 from SeLoger import SeLogerAchat
+from SeLoger import show_search_filters
+
+# Check the syntax for the relevant search filters
+show_search_filters()
 
 search_criteria = {'cp': '75015', 'idtypebien': '1', 'pxmax': '500000', 'surfacemin': '40','tri': 'd_dt_crea', 'nb_balconsmin': '1'}
 
 rent_paris = SeLogerAchat(search_criteria)
+# get_results creates a generator that can be iterated and stored in a list
 results = rent_paris.get_results(2, print_results=1)
 ads = []
 for result in results:
@@ -99,10 +101,17 @@ df = office_marseille.results_to_dataframe(4)
 ```
 Future developments
 -------
+
 * Add log function
 * Add error handling
+* Compatibility Python 2.7
+
+Credits
+-------
+
+This wrapper has been developed for study purposes, based on the [python-craigslist](https://github.com/juliomalegria/python-craigslist) scraper.  
 
 Support
 -------
 
-If you find any bug or you want to propose a new feature, please use the `issues tracker <https://github.com/duccioa/python-seloger/issues>`__. I'll be happy to help you! :-)
+For bugs or new features, please use the [issues tracker](https://github.com/duccioa/python-seloger/issues). I welcome any contribution.
