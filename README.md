@@ -1,29 +1,23 @@
-# SeLoger
+# python-seloger
 =================
 
 A simple [SeLoger](http://www.seloger.com) wrapper.
 
 License: [MIT-Zero](https://romanrm.net/mit-zero).
 
-Disclaimer
-----------
-
-* I don't work for or have any affiliation with SeLoger.
-* This module was implemented for educational purposes. It should not be used for crawling or downloading data from SeLoger.
-
 Installation
 ------------
 From the shell:
 ```shell
-pip install git+https://github.com/duccioa/SeLoger
+pip install git+https://github.com/duccioa/python-seloger
 ```
 Depending on your system, you might want to try:
 ```shell
-pip3 install git+https://github.com/duccioa/SeLoger
+pip3 install git+https://github.com/duccioa/python-seloger
 ```
 Or:
 ```shell
-pip3 install -e git+https://github.com/duccioa/SeLoger#egg=egg_name
+pip3 install -e git+https://github.com/duccioa/python-seloger#egg=egg_name
 ```
 
 Classes

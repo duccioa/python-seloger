@@ -1,5 +1,5 @@
 
-The MIT-Zero License
+The MIT-Zero License for python-seloger
 
 Copyright (c) 2017 Duccio Aiazzi
 
